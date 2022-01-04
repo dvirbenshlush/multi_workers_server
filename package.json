@@ -1,0 +1,29 @@
+{
+  "name": "multi_workers_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mainThread.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node mainThread.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dvirbenshlush/multi_workers_server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dvirbenshlush/multi_workers_server/issues"
+  },
+  "homepage": "https://github.com/dvirbenshlush/multi_workers_server#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "express": "^4.17.2",
+    "fast-csv": "^4.3.6",
+    "haversine-distance": "^1.2.1",
+    "lodash": "^4.17.21",
+    "workerpool": "^6.1.5"
+  }
+}
