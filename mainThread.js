@@ -8,14 +8,8 @@ const { isMainThread } = require('worker_threads');
 const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 
 
-let number_of_threads
-try {  
-    var data = fs.readFileSync('config_file.txt', 'utf8');
-    number_of_threads = parseInt(data.toString().split(':')[1])
-    // console.log(number_of_threads);    
-} catch(e) {
-    console.log('Error:', e.stack);
-}
+let number_of_threads = read_confige_file()
+
 
 const csvWriter = createCsvWriter({
     path: 'result.csv',
@@ -111,3 +105,13 @@ function parseCsv() {
 
 
 
+function read_confige_file(){
+    let number_of_threads;
+    try {  
+        var data = fs.readFileSync('config_file.txt', 'utf8');
+        number_of_threads = parseInt(data.toString().split(':')[1])
+    } catch(e) {
+        console.log('Error:', e.stack);
+    }
+    return number_of_threads
+}
